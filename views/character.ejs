@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Characters</title>
+    <!-- Personal css -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body style="text-align: center; background-color: thistle;">
+    <%if(data){%>
+        <div style="background-color:gold; width: fit-content; margin: auto; padding: 5px;">
+            <h1><%= data[0].name%></h1>
+            <h3>"<%= data[0].nickname%>"</h3>
+            <img src="<%=data[0].img%>" style="width: 200px; height: 275px;">
+            <p>Status: <%=data[0].status%></p>
+            <p>Occupation: <%=data[0].occupation%></p>
+            <p>Portrayed by: <%= data[0].portrayed%></p>
+        </div>
+    <%}%>
+</body>
+</html>

@@ -1,8 +1,9 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
+import fetch from 'node-fetch';
 
 router.get('/', async(req,res)=>{
-    const url = "/api/characters";
+    const url = "https://www.breakingbadapi.com/api/characters";
     const data_response = await fetch(url, {method:'get'});
     const data  = await data_response.json();
     
@@ -11,4 +12,4 @@ router.get('/', async(req,res)=>{
     });
 });
 
-module.exports = router;
+export default router;

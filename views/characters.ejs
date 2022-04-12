@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Characters</title>
+    <!-- Personal css -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body style="text-align: center;">
+    <form action="/episodes">
+        <button>Episodes</button>
+    </form>
+    <form action="/quotes">
+        <button>Quotes</button>
+    </form>
+    <h1>Characters</h1>
+    <%if(data.length>0){%>
+        <%for (let character of data){%>
+            <div style="background-color:gold; width: fit-content; margin: auto; padding: 5px;">
+                <img src="<%=character.img%>" style="width: 100px; height: 120px;">
+                <p>Name: <%= character.name%></p>
+                <p>Nickname: <%= character.nickname%></p>
+                <p>Portrayed by: <%= character.portrayed%></p>
+                <form action="/character/<%=character.char_id%>">
+                    <button>Details</button>
+                </form>
+            </div>
+        <%}%>
+    <%}%>
+</body>
+</html>

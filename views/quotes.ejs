@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Characters</title>
+    <!-- Personal css -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body style="text-align: center;">
+    <form action="/characters">
+        <button>Characters</button>
+    </form>
+    <form action="/episodes">
+        <button>Episodes</button>
+    </form>
+    <h1>Episodes</h1>
+    <%if(data.length>0){%>
+        <%for (let quote of data){%>
+            <div style="background-color:rosybrown; width: fit-content; margin: auto; padding: 5px;">
+                <h2>"<%=quote.quote%>"</h3>
+                <h3><%=quote.author%></h4>
+            </div>
+        <%}%>
+    <%}%>
+</body>
+</html>
